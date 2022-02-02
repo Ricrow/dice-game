@@ -8,6 +8,7 @@ const diceImage = document.getElementById('dice');
 //Setting global variables
 
 let currentScore, globalScore, activePlayer;
+let gameActive = true;
 
 //Function for random number of a dice
 
@@ -33,3 +34,18 @@ function diceImageDisplay(number) {
       return 'fa-dice-six';
   };
 };
+
+// Buttons event
+
+roll.addEventListener('click', () => {
+  if (gameActive) {
+    let dice = randomDiceNumber();
+    diceImage.classList.replace(diceImage.classList[1], diceImageDisplay(dice));
+    if (dice !== 1) {
+      currentScore += dice;
+      document.getElementById(`current-score0`).innerText = currentScore;
+    } else {
+      document.getElementById('current-score0').classList.remove('active');
+    }
+  }
+});
