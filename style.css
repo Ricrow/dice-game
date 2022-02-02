@@ -19,6 +19,10 @@ body {
   align-items: center;
 }
 
+:root {
+  --primary-color: rgb(200, 0, 0);
+}
+
 /* Dice game window */
 
 .dice-game {
@@ -34,7 +38,7 @@ body {
 
 /* icons color */
 .fas {
-  color: rgb(200, 0, 0);
+  color: var(--primary-color);
 }
 
 #new-game, .dice-box, #roll, #hold {
@@ -85,4 +89,25 @@ body {
   font-size: 5em;
   margin-top: 20%;
   margin-bottom: 0.5em;
+}
+
+.box .gscore {
+  font-size: 7em;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.box .current-container {
+  background: var(--primary-color);
+  width: 20%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2em;
+}
+
+.player-left {
+  background: rgba(50, 50, 50, 0.10);
 }
