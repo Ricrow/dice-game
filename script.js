@@ -8,7 +8,8 @@ const diceImage = document.getElementById('dice');
 //Setting global variables
 
 let currentScore, globalScore, activePlayer;
-gameActive = false;
+let gameActive = false;
+const scoreToWin = 20;
 
 //Function for random number of a dice
 
@@ -86,9 +87,13 @@ hold.addEventListener('click', () => {
   if (gameActive) {
     globalScore[activePlayer] += currentScore;
     document.getElementById(`global-score${activePlayer}`).innerText = globalScore[activePlayer];
-    if (globalScore[activePlayer] < 100) {
+    if (globalScore[activePlayer] < scoreToWin) {
       document.getElementById(`player${activePlayer}`).classList.remove('active');
       switchPlayer();
+    } else {
+      gameActive = false;
+      document.getElementById(`player${activePlayer}`).classList.add('winner');
+      document.getElementById(`player${activePlayer}`).innerText = 'WINNER !';
     }
   }
 });
