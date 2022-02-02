@@ -1,0 +1,88 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Poppins:wght@300;500;700&family=Prompt:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgb(174, 195, 0), rgb(107, 120, 0));
+  font-family: 'lato', sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dice game window */
+
+.dice-game {
+  position: relative;
+  height: 96%;
+  width: 96%;
+  background: #fff;
+  box-shadow: 5px 5px 15px 1px rgba(0,0,0,0.6);
+  display: flex;
+}
+
+/* BUTTONS AND DICE */
+
+/* icons color */
+.fas {
+  color: rgb(200, 0, 0);
+}
+
+#new-game, .dice-box, #roll, #hold {
+  position: absolute;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+  left: 0;
+  right: 0;
+  font-weight: 300;
+  cursor: pointer;
+  font-size: 2em;
+}
+
+#new-game {
+  top: 10%;
+}
+
+.dice-box {
+  top: 25%;
+  cursor: initial;
+}
+
+#dice {
+  font-size: 8em;
+}
+
+#roll {
+  bottom: 30%;
+}
+
+#hold {
+  bottom: 20%;
+}
+
+/* BOX PLAYER */
+
+.box {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.box .player-title {
+  font-size: 5em;
+  margin-top: 20%;
+  margin-bottom: 0.5em;
+}
