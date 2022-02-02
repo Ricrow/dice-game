@@ -35,6 +35,9 @@ function displayGame() {
   document.getElementById('player0').classList.remove('winner');
   document.getElementById('player1').classList.remove('winner');
   document.getElementById('player0').classList.add('active');
+
+  document.getElementById('player0').innerText = 'Player 1';
+  document.getElementById('player1').innerText = 'Player 2';
 }
 
 //Function switchPlayer when round is finish
@@ -69,6 +72,7 @@ function diceImageDisplay(number) {
 
 // Buttons event
 
+// Roll button
 roll.addEventListener('click', () => {
   if (gameActive) {
     let dice = randomDiceNumber();
@@ -83,6 +87,7 @@ roll.addEventListener('click', () => {
   }
 });
 
+// Hold button
 hold.addEventListener('click', () => {
   if (gameActive) {
     globalScore[activePlayer] += currentScore;
@@ -98,4 +103,6 @@ hold.addEventListener('click', () => {
   }
 });
 
-displayGame();
+//New game button
+
+newGame.addEventListener('click', displayGame);
