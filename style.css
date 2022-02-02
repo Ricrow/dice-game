@@ -63,7 +63,7 @@ body {
 }
 
 #dice {
-  font-size: 8em;
+  width: 300px;
 }
 
 #roll {
