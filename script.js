@@ -9,7 +9,7 @@ const diceImage = document.getElementById('dice');
 
 let currentScore, globalScore, activePlayer;
 let gameActive = false;
-const scoreToWin = 20;
+const scoreToWin = 100;
 
 //Function for random number of a dice
 
