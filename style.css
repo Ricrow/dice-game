@@ -108,6 +108,10 @@ body {
   font-size: 2em;
 }
 
+.box .current-container p {
+  font-weight: 300;
+}
+
 .player-left {
   background: rgba(50, 50, 50, 0.10);
 }
