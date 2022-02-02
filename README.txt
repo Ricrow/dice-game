@@ -10,3 +10,6 @@
 
 #construction scrip.js: 
   #	-Fonction de dé aléatoire. 
+  #	-Fonction d'initialisation.
+  #	-Ajout d'un bool permettant d'activer le jeu.
+  #	-Utilisation des boutons pour animer les scores et le changements des icones dés.

@@ -136,3 +136,10 @@ body {
   right: -50px;
   top: 50%;
 }
+
+/* WINNER STATUS */
+
+.winner {
+  font-weight: 300;
+  color: var(--primary-color);
+}
