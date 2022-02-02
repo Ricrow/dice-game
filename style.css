@@ -111,3 +111,24 @@ body {
 .player-left {
   background: rgba(50, 50, 50, 0.10);
 }
+
+.box .current-container .current-point {
+  font-size: 2.5em;
+  color: #fff;
+}
+
+.active {
+  font-weight: 300 !important;
+  position: relative;
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  right: -50px;
+  top: 50%;
+}
