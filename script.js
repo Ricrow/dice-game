@@ -8,6 +8,7 @@ const diceImage = document.getElementById('dice');
 //Setting global variables
 
 let currentScore, globalScore, activePlayer;
+gameActive = false;
 
 //Function for random number of a dice
 
@@ -32,7 +33,7 @@ function displayGame() {
   document.getElementById('player1').classList.remove('active');
   document.getElementById('player0').classList.remove('winner');
   document.getElementById('player1').classList.remove('winner');
-  document.getElementById('player1').classList.add('active');
+  document.getElementById('player0').classList.add('active');
 }
 
 //Function switchPlayer when round is finish
@@ -76,6 +77,7 @@ roll.addEventListener('click', () => {
       document.getElementById(`current-score${activePlayer}`).innerText = currentScore;
     } else {
       document.getElementById(`current-score${activePlayer}`).classList.remove('active');
+      switchPlayer();
     }
   }
 });
@@ -86,6 +88,7 @@ hold.addEventListener('click', () => {
     document.getElementById(`global-score${activePlayer}`).innerText = globalScore[activePlayer];
     if (globalScore[activePlayer] < 100) {
       document.getElementById(`player${activePlayer}`).classList.remove('active');
+      switchPlayer();
     }
   }
 });
